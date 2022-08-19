@@ -8,8 +8,6 @@ It is a Java console based application.
 
 ## Functionalities
 
-Below are the functionalities you can perform
-
 - Login
 - Forgot Password
 - Post Tweet
