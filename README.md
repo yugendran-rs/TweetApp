@@ -1,2 +1,2 @@
 # TweetApp
-Tweet Application
+Tweet Application with Kafka and Docker compose
