@@ -21,7 +21,7 @@ public class SecurityConfigurer {
 
 	private final String[] publicEndPoints = { "/**/register", "/**/login", "/**/forgot", "/**/refresh", "/actuator/**",
 			"/v3/api-docs/**", "/swagger-ui*/**", "/v2/api-docs/**", "/swagger-resources/**", "/swaggerui",
-			"/**/swagger*/**", "/**/api-docs*/**" };
+			"/**/swagger*/**", "/**/api-docs*/**", "/**/all" };
 
 	@Autowired
 	private JwtRequestFilter jwtRequestFilter;

@@ -124,7 +124,8 @@ public class TweetService {
 
 	public Response deleteTweet(String email, String id) {
 		Response response;
-		kafkaProducerService.sendMessage(id);
+//		kafkaProducerService.sendMessage(id);
+		tweetRepository.deleteById(id);
 		response = new Response(ServiceConstants.SUCCESS, ServiceConstants.HTTP_OK, "Tweet Deleted");
 		return response;
 	}
