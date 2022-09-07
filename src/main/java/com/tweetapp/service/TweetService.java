@@ -26,16 +26,13 @@ import com.tweetapp.repository.UserRepository;
 @Service
 public class TweetService {
 
+	private Logger logger = LogManager.getLogger(TweetService.class);
+
 	@Autowired
 	private TweetRepository tweetRepository;
 
 	@Autowired
 	private UserRepository userRepository;
-
-	@Autowired
-	private KafkaProducerService kafkaProducerService;
-
-	private Logger logger = LogManager.getLogger(TweetService.class);
 
 	public ResponseEntity<Response> getAllTweets() {
 		logger.info("Inside getAllTweets() ...");
@@ -124,7 +121,7 @@ public class TweetService {
 
 	public Response deleteTweet(String email, String id) {
 		Response response;
-		kafkaProducerService.sendMessage(id);
+		tweetRepository.deleteById(id);
 		response = new Response(ServiceConstants.SUCCESS, ServiceConstants.HTTP_OK, "Tweet Deleted");
 		return response;
 	}
