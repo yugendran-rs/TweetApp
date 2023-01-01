@@ -1,0 +1,123 @@
+@import "../../utilities/scss-variables/variables.scss";
+
+.tweet {
+  padding: 15px 25px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 20px;
+  width: 550px;
+  box-shadow: 1px 2px 4px -3px rgba(0, 0, 0, 0.5);
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .avatar {
+    width: 100px;
+    flex: 1;
+    img {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 4;
+    width: 300px;
+    word-wrap: break-word;
+
+    .name {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      h6 {
+        font-weight: 500;
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .space {
+        width: 5px;
+        height: 5px;
+        background: rgb(178, 178, 178);
+        border-radius: 50%;
+        margin: 0 5px;
+      }
+    }
+
+    .message {
+      margin-top: 0px;
+      width: 100%;
+      p {
+        text-align: left;
+        margin: 10px 0 0 0;
+      }
+    }
+
+    .reactions {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-top: 10px;
+
+      i {
+        color: rgb(148, 148, 148);
+        font-size: 1.5rem !important;
+        cursor: pointer;
+      }
+    }
+
+    .expand {
+      margin-top: 10px;
+    }
+
+    .expand-reply {
+      margin-top: 10px;
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      word-wrap: break-word;
+
+      .name {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        h6 {
+          font-weight: 400;
+          margin: 0;
+          font-size: 14px;
+        }
+
+        .space {
+          width: 5px;
+          height: 5px;
+          background: rgb(178, 178, 178);
+          border-radius: 50%;
+          margin: 0 5px;
+        }
+      }
+
+      .reply {
+        margin-top: 5px;
+        text-align: left;
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+.tweet:hover {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 5px #f3f3f3, 5px 5px 10px #ffffff;
+  transition: 0.3s;
+}
